@@ -19,9 +19,10 @@ a {
     font-family: BunchBlossoms;
     src: url(./../fonts/BunchBlossomsPersonalUse-0nA4.ttf);
 }
-@font-face{
+
+@font-face {
     font-family: Halimun;
-    src:url(./../fonts/Halimun-W7jn.ttf);
+    src: url(./../fonts/Halimun-W7jn.ttf);
 }
 
 @font-face {
@@ -29,12 +30,12 @@ a {
     src: url(./../fonts/PalmspringsPersonalUseRegular-d9VDV.ttf);
 }
 
-@font-face{
+@font-face {
     font-family: Radenaper;
     src: url(./../fonts/RadenapersonaluseRegular-7BpJR.otf);
 }
 
-@font-face{
+@font-face {
     font-family: Southampton;
     src: url(./../fonts/Southampton-MRqp.ttf);
 }
@@ -43,12 +44,14 @@ a {
 header {
     width: 100%;
     height: 100vh;
-    background-color: black;
     /* background: linear-gradient(to bottom, rgba(0,0,0,.8), rgba(0,0,0,.5)), url("https://images.unsplash.com/photo-1523374228107-6e44bd2b524e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80") center no-repeat; */
     background-size: cover;
     font-family: palmsprings;
     position: relative;
     overflow: hidden;
+}
+#backgroundimg{
+    background: linear-gradient(to bottom, rgba(0,0,0,.9), rgba(0,0,0,.8));
 }
 
 .container {
@@ -195,9 +198,7 @@ nav ul li a:hover::after {
     width: 800px;
     height: calc(100vh - 150px);
     margin: 17vmin auto;
-    border-radius: 50%;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, .5);
-    background-color: black;
+    background-color: transparent;
     transition: all .3s;
 }
 
@@ -290,7 +291,7 @@ nav ul li a:hover::after {
     word-spacing: 2px;
 }
 
-.hero .text h1 span{
+.hero .text h1 span {
     color: white;
 }
 
@@ -332,10 +333,11 @@ nav ul li a:hover::after {
 
 
 
-.hero .btn-arrow{
+.hero .btn-arrow {
     position: absolute;
 }
-.hero .btn-arrow.btn-prev{
+
+.hero .btn-arrow.btn-prev {
     top: 70%;
     left: 0%;
     font-size: 3rem;
@@ -346,7 +348,8 @@ nav ul li a:hover::after {
     cursor: pointer;
 
 }
-.hero .btn-arrow.btn-next{
+
+.hero .btn-arrow.btn-next {
     top: 70%;
     left: 100%;
     font-size: 3rem;
@@ -361,6 +364,15 @@ nav ul li a:hover::after {
 
 /*------------ hero section end --------------*/
 
+
+/* ----------------about us --------------------- */
+
+#about {
+    width: 100%;
+    min-height: 100vh;
+}
+
+/* -------------about us end------------------------ */
 
 
 
@@ -389,20 +401,22 @@ nav ul li a:hover::after {
     }
 }
 
-@media (width < 1030px){
+@media (width < 1030px) {
 
     .slide-container {
         width: 100vw;
         position: absolute;
         left: 10%;
         top: 5%;
-        
+
     }
-    .slide-container .slide{
+
+    .slide-container .slide {
         width: 150px;
         height: 150px;
     }
-    .hero .text{
+
+    .hero .text {
         top: 45%;
     }
 
@@ -435,17 +449,20 @@ nav ul li a:hover::after {
         width: 120px;
         height: 120px;
     }
-    .hero .text{
+
+    .hero .text {
         top: 50%;
     }
-    .hero .btn-arrow.btn-prev{
+
+    .hero .btn-arrow.btn-prev {
         top: 80%;
-    
+
     }
-    .hero .btn-arrow.btn-next{
+
+    .hero .btn-arrow.btn-next {
         top: 80%;
         left: 90%;
-    
+
     }
 }
 
@@ -510,16 +527,18 @@ nav ul li a:hover::after {
         min-width: 400px;
     }
 
-    .hero .text  h1{
-         font-size: 4rem;
+    .hero .text h1 {
+        font-size: 4rem;
     }
-    .bounce{
+
+    .bounce {
         margin-top: 1rem;
     }
-    .hero .btn-arrow.btn-next{
+
+    .hero .btn-arrow.btn-next {
         top: 70%;
         left: 90%;
-    
+
     }
 
 }
@@ -528,9 +547,9 @@ nav ul li a:hover::after {
 
 
     .slide-container {
-            left: -80%;
-            top: 10%;
-        
+        left: -80%;
+        top: 10%;
+
     }
 
     .slide-container .slide {
@@ -547,39 +566,45 @@ nav ul li a:hover::after {
         min-width: 400px;
     }
 
-    .hero .text  h1{
-         font-size: 6rem;
+    .hero .text h1 {
+        font-size: 6rem;
     }
-    .hero .root{
+
+    .hero .root {
         margin-top: 1rem;
     }
-    .hero .btn-arrow.btn-prev{
+
+    .hero .btn-arrow.btn-prev {
         top: 57%;
-    
+
     }
-    .hero .btn-arrow.btn-next{
+
+    .hero .btn-arrow.btn-next {
         top: 57%;
-    
+
     }
 
 }
+
 @media (width< 450px) {
 
 
     .slide-container {
-            min-width: 800px;
-            height: 100vh;
-            left: -75%;
-            top: 17%;
-        
+        min-width: 800px;
+        height: 100vh;
+        left: -75%;
+        top: 17%;
+
     }
-    .hero .btn-arrow.btn-prev{
+
+    .hero .btn-arrow.btn-prev {
         top: 57%;
-    
+
     }
-    .hero .btn-arrow.btn-next{
+
+    .hero .btn-arrow.btn-next {
         top: 57%;
-    
+
     }
 
 }
@@ -588,11 +613,11 @@ nav ul li a:hover::after {
 
 
     .slide-container {
-            min-width: 700px;
-            height: calc(100vh - 150px);
-            left: -70%;
-            top: 15%;
-        
+        min-width: 700px;
+        height: calc(100vh - 150px);
+        left: -70%;
+        top: 15%;
+
     }
 
     .hero .text {
@@ -600,19 +625,22 @@ nav ul li a:hover::after {
         left: 50%;
     }
 
-    .hero .text  h1{
-         font-size: 6rem;
+    .hero .text h1 {
+        font-size: 6rem;
     }
-    .hero .root{
+
+    .hero .root {
         margin-top: 1rem;
     }
-    .hero .btn-arrow.btn-prev{
+
+    .hero .btn-arrow.btn-prev {
         top: 60%;
-    
+
     }
-    .hero .btn-arrow.btn-next{
+
+    .hero .btn-arrow.btn-next {
         top: 60%;
-    
+
     }
 
 }
@@ -622,9 +650,9 @@ nav ul li a:hover::after {
 
 
     .slide-container {
-            left: -77%;
-            top: 7%;
-        
+        left: -77%;
+        top: 7%;
+
     }
 
 }

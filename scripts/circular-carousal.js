@@ -1,4 +1,5 @@
 const container = document.querySelector('.slide-container');
+const header=document.querySelector('.header');
 const slides = document.querySelectorAll('.slide');
 const btns = document.querySelectorAll('.btn');
 const btnPrev = document.querySelector('.btn-prev');
@@ -63,7 +64,7 @@ const animateSlide = () => {
   const activeSlide = document.querySelector('.slide.active');
   const slideBgImg = getComputedStyle(activeSlide).backgroundImage;
   
-  // container.style.backgroundImage = slideBgImg;
+  header.style.backgroundImage = slideBgImg;
 }
 const autoPlay = () => setId = setInterval(nextSlide, 3000);
 const changeSlideImg = (e) => {
@@ -74,7 +75,7 @@ const changeSlideImg = (e) => {
   const activeSlide = document.querySelector('.slide.active');
   const slideBgImg = getComputedStyle(activeSlide).backgroundImage;
 
-  // container.style.backgroundImage = slideBgImg;
+  header.style.backgroundImage = slideBgImg;
 }
 
 positionSlides();
