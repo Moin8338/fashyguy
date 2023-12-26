@@ -286,7 +286,7 @@ nav ul li a:hover::after {
     text-align: center;
     font-family: Southampton;
     font-size: 4rem;
-    letter-spacing: 2px;
+    letter-spacing: 5px;
     word-spacing: 2px;
 }
 
