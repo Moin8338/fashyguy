@@ -1,0 +1,531 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+    font-family: "Roboto Cn", sans-serif;
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+    color: #eee;
+}
+
+@font-face {
+    font-family: BunchBlossoms;
+    src: url(./../fonts/BunchBlossomsPersonalUse-0nA4.ttf);
+}
+@font-face{
+    font-family: Halimun;
+    src:url(./../fonts/Halimun-W7jn.ttf);
+}
+
+@font-face {
+    font-family: palmsprings;
+    src: url(./../fonts/PalmspringsPersonalUseRegular-d9VDV.ttf);
+}
+
+@font-face{
+    font-family: Radenaper;
+    src: url(./../fonts/RadenapersonaluseRegular-7BpJR.otf);
+}
+
+@font-face{
+    font-family: Southampton;
+    src: url(./../fonts/Southampton-MRqp.ttf);
+}
+
+
+header {
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    /* background: linear-gradient(to bottom, rgba(0,0,0,.8), rgba(0,0,0,.5)), url("https://images.unsplash.com/photo-1523374228107-6e44bd2b524e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80") center no-repeat; */
+    background-size: cover;
+    font-family: palmsprings;
+    position: relative;
+    overflow: hidden;
+}
+
+.container {
+    max-width: 120rem;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.menu-toggle {
+    position: fixed;
+    top: 2.5rem;
+    right: 2.5rem;
+    color: #eeeeee;
+    font-size: 3rem;
+    cursor: pointer;
+    z-index: 1000;
+    display: none;
+}
+
+nav {
+    padding-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+    text-transform: uppercase;
+    font-size: 1.6rem;
+}
+
+.logo {
+    font-weight: 300;
+    transform: translateX(-100rem);
+    animation: slideIn .5s forwards;
+}
+
+.logo img {
+    width: 150px;
+    border-radius: 20px 0 20px 0;
+}
+
+.brand span {
+    color: yellow;
+}
+
+nav ul {
+    display: flex;
+}
+
+nav ul li {
+    list-style: none;
+    transform: translateX(100rem);
+    animation: slideIn .5s forwards;
+}
+
+nav ul li:nth-child(1) {
+    animation-delay: 0s;
+}
+
+nav ul li:nth-child(2) {
+    animation-delay: .5s;
+}
+
+nav ul li:nth-child(3) {
+    animation-delay: 1s;
+}
+
+nav ul li:nth-child(4) {
+    animation-delay: 1.5s;
+}
+
+nav ul li a {
+    padding: 1rem 0;
+    margin: 0 3rem;
+    position: relative;
+    letter-spacing: 2px;
+}
+
+nav ul li a:last-child {
+    margin-right: 0;
+}
+
+nav ul li a::before,
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: yellow;
+    left: 0;
+    transform: scaleX(0);
+    transition: all .5s;
+}
+
+nav ul li a::before {
+    top: 0;
+    transform-origin: left;
+}
+
+nav ul li a::after {
+    bottom: 0;
+    transform-origin: right;
+}
+
+.overlay {
+    background-color: rgba(0, 0, 0, .95);
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    transition: opacity 650ms;
+    transform: scale(0);
+    opacity: 0;
+    display: none;
+}
+
+nav ul li a:hover::before,
+nav ul li a:hover::after {
+    transform: scaleX(1);
+}
+
+/* ------------ hero section ------------------ */
+
+
+
+.hero {
+    width: 100%;
+    height: calc(100vh);
+    font-family: palmsprings;
+    display: flex;
+    align-items: center;
+    color: yellow;
+    font-size: 3rem;
+    justify-content: center;
+    position: relative;
+}
+
+/* -----------------slider--------- */
+
+
+.slide-container {
+    position: relative;
+    width: 800px;
+    height: calc(100vh - 150px);
+    margin: 17vmin auto;
+    border-radius: 50%;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, .5);
+    background-color: black;
+    transition: all .3s;
+}
+
+.slide-container .slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 150px;
+    height: 150px;
+    margin-top: -4vw;
+    margin-left: -4vw;
+    background: url(https://images.unsplash.com/photo-1613681230409-6423a38c43e1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471&q=80) no-repeat center/cover;
+    border-radius: 50%;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .3);
+    cursor: pointer;
+    transform: scale(1);
+    opacity: .9;
+    transition: all .3s;
+}
+
+.slide[data-slide-no="1"] {
+    background-image: url(https://www.redwolf.in/image/cache/catalog/artwork-Images/mens/marvel-doctor-strange-protect-your-reality-t-shirt-artwork-438x438.png);
+}
+
+.slide[data-slide-no="2"] {
+    background-image: url(https://cdna.artstation.com/p/marketplace/presentation_assets/002/698/960/large/file.jpg?1683987617);
+}
+
+.slide[data-slide-no="3"] {
+    background-image: url(https://www.buytshirtdesigns.net/wp-content/uploads/2023/11/vector-t-shirt-design-minimalistic-ink-drawing-style-vanishing-point-on-white-paper-Super-Man.-watercolor-splash-in-black-and-white-but-with-only-a-few-red-and-blue-eccents-.jpg);
+}
+
+.slide[data-slide-no="4"] {
+    background-image: url(https://www.redwolf.in/image/cache/catalog/artwork-Images/kids/hulk-fist-kids-t-shirts-india-1-500x667.png);
+}
+
+.slide[data-slide-no="5"] {
+    background-image: url(https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/cd93ae3d-4c78-40f6-b7d9-3c5d57e08346/dfxpkeb-88f9133c-1893-46cb-a347-57b634401d15.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2NkOTNhZTNkLTRjNzgtNDBmNi1iN2Q5LTNjNWQ1N2UwODM0NlwvZGZ4cGtlYi04OGY5MTMzYy0xODkzLTQ2Y2ItYTM0Ny01N2I2MzQ0MDFkMTUucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.K3SZX9rbaZZRZamaO673fombQHCH0yzzTJzp00wKztc);
+}
+
+.slide[data-slide-no="6"] {
+    background-image: url(https://www.nextlook.in/cdn/shop/products/mockup-of-a-t-shirt-hanging-on-a-customizable-wall-45295-r-el2_931fe4b1-76dd-4020-a0d2-7be6aa138fb7.png?v=1639670360);
+}
+
+.slide[data-slide-no="7"] {
+    background-image: url(https://i.ytimg.com/vi/DMplWm6gP5k/oardefault.jpg?sqp=-oaymwEYCJUDENAFSFqQAgHyq4qpAwcIARUAAIhC&rs=AOn4CLCfv4Kx-XIhdzGqK23xlZ_jUgWfFw);
+}
+
+.slide[data-slide-no="8"] {
+    background-image: url(https://casualease.in/cdn/shop/files/men-rnhs-0038_17.png?v=1693844689);
+}
+
+.slide[data-slide-no="9"] {
+    background-image: url(https://m.media-amazon.com/images/W/MEDIAX_792452-T2/images/I/81S+ueh2tVL._AC_SL1500_.jpg);
+}
+
+.slide[data-slide-no="10"] {
+    background-image: url(https://m.media-amazon.com/images/I/81eEUEeyHlL._AC_UY780_.jpg);
+}
+
+.slide[data-slide-no="11"] {
+    background-image: url(https://static.vecteezy.com/system/resources/previews/005/271/798/non_2x/happy-new-year-t-shirt-design-vector.jpg);
+}
+
+.slide[data-slide-no="12"] {
+    background-image: url(https://i.etsystatic.com/13874243/r/il/a5948e/3593205355/il_fullxfull.3593205355_ipnz.jpg);
+}
+
+.slide.active,
+.slide:hover {
+    transform: scale(1.3);
+    opacity: 1;
+    z-index: 100;
+}
+
+/* ----------text------------ */
+
+.hero .text {
+    position: absolute;
+    top: 58%;
+    left: 52%;
+    line-height: 70px;
+    -webkit-transform: translate(-50%, -50%);
+    max-width: 700px;
+    min-width: 400px;
+    text-align: center;
+    font-family: Southampton;
+    font-size: 4rem;
+    letter-spacing: 2px;
+    word-spacing: 2px;
+}
+
+.hero .text h1 span{
+    color: white;
+}
+
+
+/* -----------------down arrow --------------*/
+
+
+.root {
+    display: flex;
+    justify-content: center;
+    align-content: en;
+    padding-top: 10px;
+}
+
+.bounce {
+    display: inline-block;
+    background-color: yellow;
+    font-size: 30px;
+    text-align: center;
+    color: black;
+    border-radius: 20px;
+    padding: 5px 7px 0px;
+    margin: 0 auto;
+    margin-top: 2rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    border: 1px solid yellow;
+    opacity: 0.8;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    top: 0;
+    animation: bounce 0.5s ease-out infinite alternate;
+    text-decoration: none;
+}
+
+.bounce:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+
+
+.hero .btn-arrow{
+    position: absolute;
+}
+.hero .btn-arrow.btn-prev{
+    top: 70%;
+    left: 0%;
+    font-size: 3rem;
+    color: white;
+    border: none;
+    outline: none;
+    background: none;
+    cursor: pointer;
+
+}
+.hero .btn-arrow.btn-next{
+    top: 70%;
+    left: 100%;
+    font-size: 3rem;
+    color: white;
+    border: none;
+    outline: none;
+    background: none;
+    cursor: pointer;
+
+}
+
+
+/*------------ hero section end --------------*/
+
+
+
+
+
+/* -----------------keyframe &
+----------------------------- media query---------------- */
+
+
+@keyframes bounce {
+    0% {
+        top: 0;
+        color: black;
+    }
+
+    100% {
+        top: 8px;
+        color: yellow;
+    }
+}
+
+@keyframes slideIn {
+    from {}
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+@media (width < 1100px) {
+    .slide-container {
+        width: 700px;
+        height: calc(100vh - 150px);
+    }
+
+    .slide-container .slide {
+        width: 140px;
+        height: 140px;
+    }
+}
+
+@media (width < 950px) {
+    .slide-container {
+        width: 600px;
+        height: calc(100vh - 150px);
+    }
+
+    .slide-container .slide {
+        width: 120px;
+        height: 120px;
+    }
+}
+
+
+
+@media screen and (max-width: 700px) {
+
+    .menu-toggle {
+        display: block;
+    }
+
+    nav {
+        padding-top: 0;
+        display: none;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        height: 100vh;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin-top: 5rem;
+    }
+
+    nav ul li a {
+        margin: 0;
+        font-size: 2.5rem;
+    }
+
+    .brand {
+        font-size: 5rem;
+    }
+
+    .overlay.menu-open,
+    nav.menu-open {
+        display: flex;
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    .slide-container {
+        width: 500px;
+        height: calc(100vh - 150px);
+    }
+
+    .slide-container .slide {
+        width: 80px;
+        height: 80px;
+    }
+
+    .hero .text {
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        max-width: 400px;
+        min-width: 400px;
+    }
+
+    .hero .text  h1{
+         font-size: 4rem;
+    }
+    .bounce{
+        margin-top: 0rem;
+    }
+    .hero .btn-arrow.btn-next{
+        top: 70%;
+        left: 90%;
+    
+    }
+
+}
+
+@media (width< 500px) {
+
+
+    .slide-container {
+            min-width: 700px;
+            height: calc(100vh - 150px);
+            position: absolute;
+            left: -75%;
+            top: 10%;
+        
+    }
+
+    .slide-container .slide {
+        margin: 1rem;
+        width: 130px;
+        height: 130px;
+    }
+
+    .hero .text {
+        top: 73%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        max-width: 400px;
+        min-width: 400px;
+    }
+
+    .hero .text  h1{
+         font-size: 6rem;
+    }
+    .hero .root{
+        margin-top: 1rem;
+    }
+    .hero .btn-arrow.btn-prev{
+        top: 64%;
+    
+    }
+    .hero .btn-arrow.btn-next{
+        top: 64%;
+    
+    }
+
+}
