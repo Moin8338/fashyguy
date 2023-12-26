@@ -389,6 +389,26 @@ nav ul li a:hover::after {
     }
 }
 
+@media (width < 1030px){
+
+    .slide-container {
+        width: 100vw;
+        position: absolute;
+        left: 10%;
+        top: 5%;
+        
+    }
+    .slide-container .slide{
+        width: 150px;
+        height: 150px;
+    }
+    .hero .text{
+        top: 45%;
+    }
+
+}
+
+
 @media (width < 1100px) {
     .slide-container {
         width: 700px;
@@ -401,17 +421,6 @@ nav ul li a:hover::after {
     }
 }
 
-@media (width < 950px) {
-    .slide-container {
-        width: 600px;
-        height: calc(100vh - 150px);
-    }
-
-    .slide-container .slide {
-        width: 120px;
-        height: 120px;
-    }
-}
 
 @media (width < 950px) {
     .slide-container {
@@ -439,6 +448,7 @@ nav ul li a:hover::after {
     
     }
 }
+
 
 
 
@@ -518,9 +528,6 @@ nav ul li a:hover::after {
 
 
     .slide-container {
-            min-width: 700px;
-            height: calc(100vh - 150px);
-            position: absolute;
             left: -80%;
             top: 10%;
         
@@ -562,7 +569,6 @@ nav ul li a:hover::after {
     .slide-container {
             min-width: 800px;
             height: 100vh;
-            position: absolute;
             left: -75%;
             top: 17%;
         
@@ -584,7 +590,6 @@ nav ul li a:hover::after {
     .slide-container {
             min-width: 700px;
             height: calc(100vh - 150px);
-            position: absolute;
             left: -70%;
             top: 15%;
         
@@ -593,9 +598,6 @@ nav ul li a:hover::after {
     .hero .text {
         top: 70%;
         left: 50%;
-        transform: translate(-50%, -50%);
-        max-width: 400px;
-        min-width: 400px;
     }
 
     .hero .text  h1{
@@ -620,35 +622,9 @@ nav ul li a:hover::after {
 
 
     .slide-container {
-            min-width: 700px;
-            height: calc(100vh - 150px);
-            position: absolute;
             left: -77%;
             top: 7%;
         
-    }
-
-    .hero .text {
-        top: 70%;
-        left: 50%;
-        -webkit-transform: translate(-50%, -50%);
-        max-width: 400px;
-        min-width: 400px;
-    }
-
-    .hero .text  h1{
-         font-size: 6rem;
-    }
-    .hero .root{
-        margin-top: 1rem;
-    }
-    .hero .btn-arrow.btn-prev{
-        top: 60%;
-    
-    }
-    .hero .btn-arrow.btn-next{
-        top: 60%;
-    
     }
 
 }
