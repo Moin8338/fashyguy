@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Nunito:wght@200;300;400;500;600;700;800;900;1000&display=swap');
 * {
     margin: 0;
     padding: 0;
@@ -46,12 +47,13 @@ header {
     height: 100vh;
     /* background: linear-gradient(to bottom, rgba(0,0,0,.8), rgba(0,0,0,.5)), url("https://images.unsplash.com/photo-1523374228107-6e44bd2b524e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80") center no-repeat; */
     background-size: cover;
+    background-position: center;
     font-family: palmsprings;
     position: relative;
     overflow: hidden;
 }
 #backgroundimg{
-    background: linear-gradient(to bottom, rgba(0,0,0,.9), rgba(0,0,0,.8));
+    background: linear-gradient(to bottom, rgba(0,0,0,.95), rgba(0,0,0,.7));
 }
 
 .container {
@@ -64,7 +66,7 @@ header {
     position: fixed;
     top: 2.5rem;
     right: 2.5rem;
-    color: #eeeeee;
+    color: yellow;
     font-size: 3rem;
     cursor: pointer;
     z-index: 1000;
@@ -370,11 +372,299 @@ nav ul li a:hover::after {
 #about {
     width: 100%;
     min-height: 100vh;
+    height: 100%; 
+    background-color: rgb(254, 243, 243); 
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    
 }
+#about .container{
+    max-width: 100%;
+    width: 100%;
+    margin: 0;
+    display: flex;
+    position: relative;
+    min-height: 100%; 
+     overflow: hidden;
+     background-color: #ffffff;
+}
+#about  .container:after { 
+    content: '';
+    position: absolute;
+    left: 0%;
+    top: 0%;
+    width: 100%;
+    min-height: 100vh;
+
+    background-color: #000000;
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    transition: all 1s;
+    clip-path: polygon(0% 5%, 40% 5%, 103% 100%, 0% 100%);
+  }
+
+  
+#about .left{
+    width: 50%; 
+    height: 100vh; 
+    color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+#about .left .content{
+    max-width: 80%;
+    margin-left: 150px;
+}
+#about .left .content h1{
+  font-size: 4.5rem;  
+  font-family: Halimun;
+  margin-bottom: .5rem;
+}
+#about .left .content h3{
+    font-size: 2rem;  
+  font-family: monospace;
+  color: yellow;
+  margin-bottom: 1rem;
+}
+#about .left .content h3 span{
+    margin-left: 1rem;
+    font-weight: 400;
+}
+#about .left .content p{
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.5rem;
+    word-spacing: 1px;
+    width: 80%;
+    margin-bottom: 1rem;
+}
+#about .left .content .btn{
+    color: yellow;
+    border: 2px solid yellow;
+    background-color: black;
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.5rem;
+    padding: 1rem 4rem;
+    outline: none;
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+    transition: all .3s ease;
+    border-radius: 0 5px 0 5px;
+}
+#about .left .content .btn:hover{
+    box-shadow: 10px 15px 20px rgba(255,255,0, 0.4);
+  transform: translateY(-7px);
+}
+#about .right{
+    width: 50%; 
+    height: 100vh; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+#about .right iframe{
+    display: flex;
+    border-radius: 0 20px 0 20px;
+    justify-content: start;
+    margin-right: 150px;
+}
+
 
 /* -------------about us end------------------------ */
 
+/* -----------------contact us----------------- */
 
+#contactus {
+    width: 100%;
+    background-color: rgb(0, 0, 0);
+    min-height: 100vh;
+}
+#contactus .container{
+    max-width: 100%;
+    width: 100%;
+    margin: 0;
+    display: flex;
+    position: relative;
+    min-height: 100%; 
+     overflow: hidden;
+     background-color: #000000;
+}
+
+/* #contactus  .container:after { 
+    content: '';
+    position: absolute;
+    left: 0%;
+    top: 0%;
+    width: 100%;
+    min-height: 100vh;
+    /* padding-bottom: 141.42136%; 
+
+    background-color: #ffffff;
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    transition: all 1s;
+    clip-path: polygon(0% 5%, 40% 5%, 103% 100%, 0% 100%);
+   
+  } */
+
+.form-container-main {
+    z-index: 1;
+    min-height: 100dvh;
+    width: 100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Nunito', sans-serif;
+    padding: 30px 0px;
+  }
+
+  .montserrat{
+    font-family: "Montserrat", sans-serif;
+    font-size: 3rem;
+  }
+  
+.form-container {
+    width: 60%;
+    background-color: #001925;
+    /* background-color: white; */
+    padding: 30px 30px 30px 0px;
+    display: flex;
+    border-left: 5px solid yellow;
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0 100%);
+  
+    @media(max-width:1200px){
+      width: 65%;
+    }
+    @media(max-width:1100px){
+      width: 80%;
+    }
+  
+    @media(max-width:800px) {
+      display: block;
+      padding: 30px;
+      width: 90%;
+  
+      
+    }
+}
+    
+  
+  
+    .form-image {
+      flex-basis:50%;
+    }
+
+    .form-image h1{
+        margin-left: 30px;
+        color: white;
+        font-weight: 800;
+  
+        @media(max-width:800px) {
+          margin: auto 0 1.5rem auto;
+          text-align: center;
+        }
+      }
+  
+    
+
+
+
+  .form {
+    flex-basis:50%;  
+  } 
+
+  input{
+    /* color: white; */
+    color: #87A4B6;
+    width: 100%;
+    background-color: #002733;
+    /* background-color: black; */
+    border: none;
+    outline: none;
+    padding: 10px;
+    font-family: 'Nunito', sans-serif;
+    margin-bottom: 20px;
+    font-weight: bold;
+    transition: all 0.2s ease-in-out;
+    border-left: 1px solid transparent;
+  }
+
+  input:focus {
+    border-left: 5px solid yellow;
+  }
+
+
+  textarea{
+    width: 100%;
+    padding: 10px;
+    font-family: 'Nunito', sans-serif;
+    border: none;
+    outline: none;
+    /* color: white; */
+    color: #87A4B6;
+    width: 100%;
+    background-color: #002733;
+    /* background-color: black; */
+    color: white;
+    font-weight: bold;
+    resize: none;
+    max-height: 150px;
+    margin-bottom: 20px;
+    border-left: 1px solid transparent;
+    transition: all 0.2s ease-in-out;
+  }
+
+  textarea:focus {
+    border-left: 5px solid yellow;
+  }
+
+  .button-container {
+    display: flex;
+    gap: 10px;
+  }
+  .send-button {
+    font-size: 1.5rem;
+    flex-basis: 70%;
+    background: yellow;
+    padding:5px 10px;
+    color: black;
+    text-align: center;
+    font-weight: bold;
+    border: 1px solid transparent;
+    transition: all 0.2s ease-in-out;
+  }
+  .send-button:hover {
+    background:transparent;
+    border: 1px solid rgb(5, 5, 5);
+    color: rgb(4, 4, 4);
+  }
+  
+  .reset-button-container {
+    filter: drop-shadow(1px 1px 0px yellow);
+    flex-basis: 30%;
+  }
+  .reset-button:hover {
+      background:yellow;
+      color: black;
+    } 
+    .reset-button {
+      position: relative;
+      text-align: center;
+      padding:10px;
+      font-size: 1rem;
+      color: yellow;
+      font-weight: bold;
+      background: black;
+      clip-path: polygon(0 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%);
+      transition: all 0.2s ease-in-out;
+    }
+
+  /* ------------------contact us end--------------- */
 
 
 /* -----------------keyframe &
@@ -420,6 +710,13 @@ nav ul li a:hover::after {
         top: 45%;
     }
 
+    #about .left .content{
+        margin-left: 80px;
+    }
+    #about .right iframe{
+        margin-right: 80px;
+    }
+
 }
 
 
@@ -463,6 +760,12 @@ nav ul li a:hover::after {
         top: 80%;
         left: 90%;
 
+    }
+    #about .left .content{
+        margin-left: 20px;
+    }
+    #about .right iframe{
+        margin-right: 20px;
     }
 }
 
@@ -540,6 +843,41 @@ nav ul li a:hover::after {
         left: 90%;
 
     }
+
+    #about{
+        align-items: center;
+    }
+    #about .container{
+        flex-direction: column-reverse;
+        min-height: 100vh;
+    }
+    #about  .container:after { 
+        clip-path: polygon(0% 0%, 60% 0%, 100% 100%, 0% 100%);
+      }
+    #about .left{
+        width: 100%; 
+        height: auto; 
+        color: rgb(255, 255, 255);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        z-index: 1;
+    }
+    #about .right{
+        width: 100%; 
+        height: auto; 
+    }
+
+    #about .right iframe{
+        width: 300px;
+        height: 200px;
+        margin-right: 0;
+        margin: 0 auto;
+        margin-bottom: 2rem;
+    }
+
+    
 
 }
 
