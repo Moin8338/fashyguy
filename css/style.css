@@ -312,7 +312,7 @@ nav ul li a:hover::after {
     text-align: center;
     color: black;
     border-radius: 20px;
-    padding: 5px 7px 0px;
+    padding: 0px 5px 0px 10px;
     margin: 0 auto;
     margin-top: 2rem;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
@@ -477,7 +477,7 @@ nav ul li a:hover::after {
          font-size: 4rem;
     }
     .bounce{
-        margin-top: 0rem;
+        margin-top: 1rem;
     }
     .hero .btn-arrow.btn-next{
         top: 70%;
@@ -494,7 +494,7 @@ nav ul li a:hover::after {
             min-width: 700px;
             height: calc(100vh - 150px);
             position: absolute;
-            left: -75%;
+            left: -80%;
             top: 10%;
         
     }
@@ -506,7 +506,7 @@ nav ul li a:hover::after {
     }
 
     .hero .text {
-        top: 73%;
+        top: 65%;
         left: 50%;
         -webkit-transform: translate(-50%, -50%);
         max-width: 400px;
@@ -520,11 +520,11 @@ nav ul li a:hover::after {
         margin-top: 1rem;
     }
     .hero .btn-arrow.btn-prev{
-        top: 64%;
+        top: 57%;
     
     }
     .hero .btn-arrow.btn-next{
-        top: 64%;
+        top: 57%;
     
     }
 
