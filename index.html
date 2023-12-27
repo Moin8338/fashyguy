@@ -6,8 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <link rel="stylesheet" href="./css/style.css">
-    <title>fashyguy</title>
+    <title>Browl</title>
 </head>
 
 <body>
@@ -27,7 +28,7 @@
                 <ul>
                     <li class="menu-list"><a href="#home">Home</a></li>
                     <li class="menu-list"><a href="#home">Services</a></li>
-                    <li class="menu-list"><a href="#home">Designs</a></li>
+                    <li class="menu-list"><a href="./collection.html">Collection</a></li>
                     <li class="menu-list"><a href="#about">About</a></li>
                     <li class="menu-list"><a href="#contactus">Contact</a></li>
                 </ul>
@@ -50,7 +51,7 @@
                 <div class="text">
                     <h1 style="color: white;">Welcome</h1>
                     <h1 style="color: yellow;">to</h1>
-                    <h1>   <span class="brand" style="color: white;">fashyguy</span></h1>
+                    <h1>   <span class="brand" style="color: white;font-family: Halimun;">Browl</span></h1>
                     <div class="root">
                         <a href="#about" class="bounce">&#8595;</a> 
                       </div>
@@ -69,7 +70,7 @@
             <div>
               <div class="left">
                 <div class="content">
-                    <h1>fashyguy</h1>
+                    <h1>Browl</h1>
                 <h3>go with the flow <span>&rarr;</span></h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                     Ad maxime soluta possimus dolorem distinctio ipsa
@@ -96,14 +97,17 @@
 
                   </div>
                   <div class="form">
-                    <input type="text" id="name" placeholder="Name" autofocus>
+                    <form action="#">
+                      <input type="text" id="name" placeholder="Name" autofocus>
                     <input type="email" id="mail" placeholder="Email">
+                    <input type="tel" id="tel" placeholder="Phone">
                     <textarea name="message" id="message" cols="30" rows="10" placeholder="Say Hello" ></textarea>
                     <div class="button-container">
-                      <div class="send-button">Send</div>
+                      <div class="send-button" >Send</div>
                       <div class="reset-button-container">
                         <div class="reset-button" id="reset-btn">Reset</div>
                       </div>
+                    </form>
                     </div>
                   </div>
                 </div>
@@ -112,7 +116,51 @@
     </section>
 
 
-
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="footer-col">
+            <h4>company</h4>
+            <ul>
+              <li><a href="#about">about us</a></li>
+              <li><a href="#service">our services</a></li>
+              <li><a href="#">privacy policy</a></li>
+              <li><a href="#contactus">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>get help</h4>
+            <ul>
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">shipping</a></li>
+              <li><a href="#">returns</a></li>
+              <li><a href="#">order status</a></li>
+              <li><a href="#">payment options</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>collection</h4>
+            <ul>
+              <li><a href="#">Marvel</a></li>
+              <li><a href="#">DC</a></li>
+              <li><a href="#">CyberPunk</a></li>
+              <li><a href="#">India Traditional</a></li>
+              <li><a href="#">Eminem</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>follow us</h4>
+            <div class="social-links">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fas fa-envelope"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <!-- <a href="#"><i class="fab fa-linkedin-in"></i></a> -->
+            </div>
+            <img src="./images/logo.jpeg" style="width: 100px;margin-top: .2rem;border-radius: 0 10px 0 10px;" alt="">
+          </div>
+        </div>
+      </div>
+   </footer>
 
     <script src="./scripts/script.js"></script>
     <script src="./scripts/circular-carousal.js"></script>
