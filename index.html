@@ -12,19 +12,24 @@
 
 <body>
   <div class="overlay"></div>
-    <header  class="header">
+    <header  class="header" id="home">
       <div id="backgroundimg">
         <div class="menu-toggle" id="hamburger">
-            <i class="fas fa-bars"></i>
+            <div class="container">
+              <i class="fas fa-bars" id="menu-icon"></i>
+            <a href="#" class="logo" id="logo"><img src="./images/logo.jpeg" alt="" srcset=""></a>
+            </div>
         </div>
+        
         <div class="container">
             <nav>
-                <a href="#" class="logo"><img src="./images/logo.jpeg" alt="" srcset=""></a>
+                <a href="#" class="logo menu-logo"><img src="./images/logo.jpeg" alt="" srcset=""></a>
                 <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li class="menu-list"><a href="#home">Home</a></li>
+                    <li class="menu-list"><a href="#home">Services</a></li>
+                    <li class="menu-list"><a href="#home">Designs</a></li>
+                    <li class="menu-list"><a href="#about">About</a></li>
+                    <li class="menu-list"><a href="#contactus">Contact</a></li>
                 </ul>
             </nav>
             <div class="hero">
