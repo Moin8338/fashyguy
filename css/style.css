@@ -40,7 +40,9 @@ a {
     font-family: Southampton;
     src: url(./../fonts/Southampton-MRqp.ttf);
 }
-
+body{
+    position: relative;
+}
 
 header {
     width: 100%;
@@ -49,7 +51,6 @@ header {
     background-size: cover;
     background-position: center;
     font-family: palmsprings;
-    position: relative;
     overflow: hidden;
 }
 #backgroundimg{
@@ -161,6 +162,8 @@ nav ul li a::after {
 .overlay {
     background-color: rgba(0, 0, 0, .95);
     position: fixed;
+    width: 100%;
+    min-height: 100vh;
     right: 0;
     left: 0;
     top: 0;
@@ -405,7 +408,6 @@ nav ul li a:hover::after {
     top: 0%;
     width: 100%;
     min-height: 100vh;
-
     background-color: #000000;
     -webkit-transition: all 1s;
     -moz-transition: all 1s;
@@ -502,23 +504,6 @@ nav ul li a:hover::after {
      overflow: hidden;
      background-color: #000000;
 }
-
-/* #contactus  .container:after { 
-    content: '';
-    position: absolute;
-    left: 0%;
-    top: 0%;
-    width: 100%;
-    min-height: 100vh;
-    /* padding-bottom: 141.42136%; 
-
-    background-color: #ffffff;
-    -webkit-transition: all 1s;
-    -moz-transition: all 1s;
-    transition: all 1s;
-    clip-path: polygon(0% 5%, 40% 5%, 103% 100%, 0% 100%);
-   
-  } */
 
 .form-container-main {
     z-index: 1;
@@ -879,7 +864,7 @@ nav ul li a:hover::after {
     }
 
     #about .right iframe{
-        width: 300px;
+        width: 350px;
         height: 200px;
         margin-right: 0;
         margin: 0 auto;
