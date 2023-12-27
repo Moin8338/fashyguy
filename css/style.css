@@ -372,22 +372,30 @@ nav ul li a:hover::after {
 #about {
     width: 100%;
     min-height: 100vh;
-    height: 100%; 
+    height: 100%;
     background-color: rgb(254, 243, 243); 
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
+    overflow: hidden;
     
 }
 #about .container{
     max-width: 100%;
     width: 100%;
     margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+     background-color: #ffffff;
+}
+#about .container>div{
+    max-width: 100%;
+    width: 100%;
+    margin: 0;
     display: flex;
     position: relative;
-    min-height: 100%; 
-     overflow: hidden;
      background-color: #ffffff;
 }
 #about  .container:after { 
@@ -846,11 +854,12 @@ nav ul li a:hover::after {
 
     #about{
         align-items: center;
+        justify-content: center;
     }
-    #about .container{
+    #about .container>div{
         flex-direction: column-reverse;
-        min-height: 100vh;
     }
+    
     #about  .container:after { 
         clip-path: polygon(0% 0%, 60% 0%, 100% 100%, 0% 100%);
       }
@@ -875,8 +884,12 @@ nav ul li a:hover::after {
         margin-right: 0;
         margin: 0 auto;
         margin-bottom: 2rem;
+        margin-top: 2rem;
     }
 
+    .form-container-main {
+        padding: 30px 0px;
+      }
     
 
 }
