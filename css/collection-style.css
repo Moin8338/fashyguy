@@ -8,10 +8,14 @@
   box-sizing: border-box;
 }
 
+body::-webkit-scrollbar {
+  display: none;
+}
 
 body {
   background-color: black;
 }
+
 html {
   /* font-size: 10px; */
   font-family: "Roboto Cn", sans-serif;
@@ -31,7 +35,7 @@ a {
 
 header {
   width: 100%;
-  height: 100vh;
+  height: auto;
   /* background: linear-gradient(to bottom, rgba(0,0,0,.8), rgba(0,0,0,.5)), url("https://images.unsplash.com/photo-1523374228107-6e44bd2b524e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80") center no-repeat; */
   background-size: cover;
   background-position: center;
@@ -73,10 +77,10 @@ li.menu-list {
 
 .menu-toggle .container .phonelogo img {
   margin-top: .7rem;
-  width: 100px;
+  width: 120px;
 }
 
-.phonelogounactive{
+.phonelogounactive {
   display: none;
 }
 
@@ -99,7 +103,7 @@ nav {
   animation: slideIn .5s forwards;
 }
 
-.logo{
+.logo {
   width: 150px;
   border-radius: 20px 0 20px 0;
 }
@@ -291,8 +295,6 @@ nav ul li a:hover::after {
 
 .pre-define-suggestion {
   color: white;
-  display: flex;
-  flex-wrap: wrap;
   padding-top: 1.5rem;
   width: 100%;
   height: 100%;
@@ -300,9 +302,24 @@ nav ul li a:hover::after {
   box-sizing: border-box;
 }
 
-.pre-define-suggestion p{
+.pre-define-suggestion>div {
+  width: fit-content;
+  height: auto;
+  max-width: 100%;
+  overflow-x: scroll;
+  display: flex;
+  padding: .5rem;
+}
+
+.pre-define-suggestion>div::-webkit-scrollbar {
+  display: none;
+}
+
+.pre-define-suggestion p {
   padding: .5rem 1rem;
+  margin: 0 .25rem;
   font-weight: 300;
+  text-wrap: nowrap;
   background-color: white;
   color: black;
   border-radius: 20px;
@@ -310,10 +327,58 @@ nav ul li a:hover::after {
   transition: transform .3s ease;
 }
 
-.pre-define-suggestion p:hover{
-  transform: scale(1.05 );
-  box-shadow: 2px 2px 10px white,inset -2px -2px 10px white;
+.pre-define-suggestion p:hover {
+  transform: scale(1.05);
+  box-shadow: 2px 2px 10px white, inset -2px -2px 10px white;
 }
+
+
+
+/* -------------------design-list section-------------------- */
+
+  #design-list{
+    width: 100%;
+    height: auto;
+  }
+
+  #design-list .container{
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+  }
+
+
+  #design-list .container .design-cards{
+    width: 100%;
+    height: auto;
+    padding: .5rem;
+    align-items: start;
+	display: grid;
+	grid-gap: 16px;
+	grid-template-columns: repeat(auto-fit, 150px);
+	justify-content: center;
+  }
+
+  #design-list .container .design-cards .design-card{
+    border-radius: 5px;
+    background-color: white;
+    text-align: center;
+    box-shadow: 3px 3px 10px white,inset -3px -3px 10px white;
+    transition: transform .4s ease;
+  }
+
+  #design-list .container .design-cards .design-card:hover{
+    transform: translateY(-5px);
+  }
+
+
+  #design-list .container .design-cards .design-card img{
+    width: 80%;
+    margin: 0 auto;
+  }
+
+/* ------------------------design-list end---------------------- */
 
 
 
@@ -323,7 +388,7 @@ nav ul li a:hover::after {
 
 
 @media (width < 1100px) {
- .filtering .container {
+  .filtering .container {
     max-width: 60%;
   }
 }
@@ -342,13 +407,13 @@ nav ul li a:hover::after {
 
   .menu-toggle {
     display: block;
-}
+  }
 
-/* .menu-logo{
+  /* .menu-logo{
     display: none;
 } */
 
-nav {
+  nav {
     padding-top: 0;
     display: none;
     flex-direction: column;
@@ -356,27 +421,27 @@ nav {
     align-items: center;
     height: 100vh;
     text-align: center;
-}
+  }
 
-nav ul {
+  nav ul {
     flex-direction: column;
-}
+  }
 
-nav ul li {
+  nav ul li {
     margin-top: 3rem;
-}
+  }
 
-nav ul li a {
+  nav ul li a {
     margin: 0;
     font-size: 1.5rem;
-}
+  }
 
-/* .brand {
+  /* .brand {
     font-size: 5rem;
 } */
 
-.overlay.menu-open,
-nav.menu-open {
+  .overlay.menu-open,
+  nav.menu-open {
     display: flex;
     position: fixed;
     background: black;
@@ -387,11 +452,11 @@ nav.menu-open {
     z-index: 999;
     transform: scale(1);
     opacity: 1;
-}
+  }
 
-.filtering {
-  padding-top: 80px;
-}
+  .filtering {
+    padding-top: 80px;
+  }
 
   .filtering .container {
     max-width: 90%;
@@ -435,6 +500,6 @@ nav.menu-open {
   from {}
 
   to {
-      transform: translateX(0);
+    transform: translateX(0);
   }
 }

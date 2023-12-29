@@ -2,223 +2,251 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/collection-style.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
-    <title>Collection</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/collection-style.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+  <title>Collection</title>
 </head>
 
 <body>
 
-    <div class="overlay"></div>
-    <section id="search-collection">
-        <header class="search-collection">
+  <div class="overlay"></div>
+  <section id="search-collection">
+    <header class="search-collection">
 
-            <div class="menu-toggle">
-                <div class="container">
-                    <i class="fas fa-bars" id="hamburger"></i>
-                    <a href="#" class="phonelogo" id="logo"><img src="./images/final-logo.png" alt="" srcset=""></a>
+      <div class="menu-toggle">
+        <div class="container">
+          <i class="fas fa-bars" id="hamburger" style="font-size: 1.7rem;"></i>
+          <a href="#" class="phonelogo" id="logo"><img src="./images/HORI.png" alt="" srcset=""></a>
+        </div>
+      </div>
+
+      <div class="container">
+        <nav>
+          <img class="logo menu-logo" style="width: 100px;" src="./images/logo.png" alt="" srcset="" />
+          <!-- <img class="logo menu-logo" src="./images/final-logo.png" alt="" srcset="" /> -->
+          <ul>
+            <li class="menu-list"><a href="./index.html#home">Home</a></li>
+            <!-- <li class="menu-list"><a href="./index.html#home">Services</a></li> -->
+            <li class="menu-list"><a href="./collection.html">Collection</a></li>
+            <li class="menu-list"><a href="./index.html#about">About</a></li>
+            <li class="menu-list"><a href="./index.html#contactus">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="filtering">
+
+          <div class="container">
+            <div class="search-bar">
+
+              <!-- --------search bar with input resultBox -->
+
+              <div class="searchInput">
+                <input type="text" placeholder="search your design ...">
+                <div class="resultBox">
+                  <!-- here list are inserted from javascript -->
                 </div>
-            </div>
-
-            <div class="container">
-                <nav>
-                    <img class="logo menu-logo" src="./images/final-logo.png" alt="" srcset="" />
-                    <ul>
-                        <li class="menu-list"><a href="#home">Home</a></li>
-                        <li class="menu-list"><a href="#home">Services</a></li>
-                        <li class="menu-list"><a href="./collection.html">Collection</a></li>
-                        <li class="menu-list"><a href="#about">About</a></li>
-                        <li class="menu-list"><a href="#contactus">Contact</a></li>
-                    </ul>
-                </nav>
-                <div class="filtering">
-
-                    <div class="container">
-                        <div class="search-bar">
-
-                            <!-- --------search bar with input resultBox -->
-
-                            <div class="searchInput">
-                                <input type="text" placeholder="search your design ...">
-                                <div class="resultBox">
-                                    <!-- here list are inserted from javascript -->
-                                </div>
-                                <div class="icon">
-                                    <svg aria-hidden="true" focusable="false" data-prefix="fas"
-                                        data-icon="magnifying-glass" role="img" xmlns="http://www.w3.org/2000/svg"
-                                        viewBox="0 0 512 512" class="svg-inline--fa fa-magnifying-glass"
-                                        style="line-height: 1;">
-                                        <path fill="currentColor"
-                                            d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"
-                                            class=""></path>
-                                    </svg>
-                                </div>
-                            </div>
-
-                            <!-- -----------------end---------------- -->
-
-                        </div>
-                        <div class="pre-define-suggestion">
-                            <p>Marvel</p>
-                            <p>DoctorStrang</p>
-                            <p>Hulk</p>
-                            <p>Ironman</p>
-                            <p>Spiderman</p>
-                            <p>Thor</p>
-                            <p>Wanda</p>
-                            <p>Vision</p>
-                            <p>Antman</p>
-                            <p>Loki</p>
-                            <p>Bucky</p>
-                            <p>DC</p>
-                            <p>Flash</p>
-                            <p>Superman</p>
-                            <p>Indian Traditional</p>
-                            <p>Blackadam</p>
-                            <p>Bluebeetle</p>
-                            <p>Batman</p>
-                            <p>CyberPunk</p>
-                            <p>Eminem</p>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </header>
-    </section>
-
-
-    <!-- <section id="designs">
-        <div class="design">
-            <div class="container">
-                <div class="cards">
-                  <div class="card-item">
-                    <div class="card-image">
-                    </div>
-                    <div class="card-info">
-                      <h2 class="card-title">Exploring around</h2>
-                      <p class="card-intro">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="cards">
-                  <div class="card-item">
-                    <div class="card-image">
-                    </div>
-                    <div class="card-info">
-                      <h2 class="card-title">A new trail you can't miss</h2>
-                      <p class="card-intro">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="cards">
-                  <div class="card-item">
-                    <div class="card-image">
-                    </div>
-                    <div class="card-info">
-                      <h2 class="card-title">Inside the Outdoors</h2>
-                      <p class="card-intro">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="cards">
-                  <div class="card-item">
-                    <div class="card-image">
-                    </div>
-                    <div class="card-info">
-                      <h2 class="card-title">Essential hiking hacks</h2>
-                      <p class="card-intro">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="cards">
-                  <div class="card-item">
-                    <div class="card-image">
-                    </div>
-                    <div class="card-info">
-                      <h2 class="card-title">Discovering this hidden gem</h2>
-                      <p class="card-intro">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="cards">
-                  <div class="card-item">
-                    <div class="card-image">
-                    </div>
-                    <div class="card-info">
-                      <h2 class="card-title">1 Day routes for this weekend</h2>
-                      <p class="card-intro">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                    </div>
-                  </div>
+                <div class="icon">
+                  <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="magnifying-glass" role="img"
+                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="svg-inline--fa fa-magnifying-glass"
+                    style="line-height: 1;">
+                    <path fill="currentColor"
+                      d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"
+                      class=""></path>
+                  </svg>
                 </div>
               </div>
+
+
+            </div>
+
+            <!-- -----------------end---------------- -->
+
+
+            <!-- ------------pre defined suggestion----------- -->
+
+
+            <div class="pre-define-suggestion">
+              <div class="marvel-collection">
+                <p>Marvel</p>
+                <p>DoctorStrang</p>
+                <p>Hulk</p>
+                <p>Ironman</p>
+                <p>Spiderman</p>
+                <p>Thor</p>
+                <p>Wanda</p>
+                <p>Vision</p>
+                <p>Antman</p>
+                <p>Loki</p>
+                <p>Bucky</p>
+              </div>
+              <div class="dc-collection">
+                <p>DC</p>
+                <p>Flash</p>
+                <p>Superman</p>
+                <p>Blackadam</p>
+                <p>Bluebeetle</p>
+                <p>Batman</p>
+                <p>CyberPunk</p>
+                <p>Eminem</p>
+                <p>Indian Traditional</p>
+              </div>
+
+            </div>
+
+            <!-- --------------------pre defined suggestion end--------------------- -->
+          </div>
+
+
+
         </div>
-    </section> -->
+      </div>
+    </header>
+  </section>
+
+
+  <!-- -------------------------- filtered design Or result -------------------- -->
+
+  <section id="design-list">
+    <div class="container">
+      <div class="design-cards">
+        <div class="design-card">
+          <div class="design-container">
+            <img
+              src="./mokup/design.png"
+              alt="" srcset="">
+          </div>
+        </div>
+        <div class="design-card">
+          <div class="design-container">
+            <img
+              src="./mokup/design.png"
+              alt="" srcset="">
+          </div>
+        </div>
+        <div class="design-card">
+          <div class="design-container">
+            <img
+              src="./mokup/design.png"
+              alt="" srcset="">
+          </div>
+        </div>
+        <div class="design-card">
+          <div class="design-container">
+            <img
+              src="./mokup/design.png"
+              alt="" srcset="">
+          </div>
+        </div>
+        <div class="design-card">
+          <div class="design-container">
+            <img
+              src="./mokup/design.png"
+              alt="" srcset="">
+          </div>
+        </div>
+        <div class="design-card">
+          <div class="design-container">
+            <img
+              src="./mokup/design.png"
+              alt="" srcset="">
+          </div>
+        </div>
+        <div class="design-card">
+          <div class="design-container">
+            <img
+              src="./mokup/design.png"
+              alt="" srcset="">
+          </div>
+        </div>
+        <div class="design-card">
+          <div class="design-container">
+            <img
+              src="./mokup/design.png"
+              alt="" srcset="">
+          </div>
+        </div>
+        <div class="design-card">
+          <div class="design-container">
+            <img
+              src="./mokup/design.png"
+              alt="" srcset="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- --------------filtered design Or result end---------------------------- -->
 
 
 
-    <script src="./scripts/filter-collection.js"></script>
-    <script>
-        var open = document.getElementById('hamburger');
-        var elements = document.getElementsByClassName('menu-list');
-        var overlay = document.querySelector('.overlay');
-        var nav = document.querySelector('nav');
-        var icons = document.querySelector('.menu-toggle i');
-        var logo = document.querySelector('.phonelogo');
-        var changeIcon = true;
 
-        // Add click event listeners
-        for (var i = 0; i < elements.length; i++) {
-            elements[i].addEventListener('click', function () {
-                overlay.classList.toggle("menu-open");
-                nav.classList.toggle("menu-open");
-                logo.classList.toggle('phonelogounactive');
 
-                if (changeIcon) {
 
-                    icons.classList.remove("fa-bars");
-                    icons.classList.add("fa-times");
+  <!-------------------------------
+    ------------------------------------ Java script files -->
 
-                    changeIcon = false;
-                }
-                else {
-                    icons.classList.remove("fa-times");
-                    icons.classList.add("fa-bars");
-                    changeIcon = true;
-                }
-            });
+  <script src="./scripts/filter-collection.js"></script>
+  <script>
+    var open = document.getElementById('hamburger');
+    var elements = document.getElementsByClassName('menu-list');
+    var overlay = document.querySelector('.overlay');
+    var nav = document.querySelector('nav');
+    var icons = document.querySelector('.menu-toggle i');
+    var logo = document.querySelector('.phonelogo');
+    var changeIcon = true;
+
+    // Add click event listeners
+    for (var i = 0; i < elements.length; i++) {
+      elements[i].addEventListener('click', function () {
+        overlay.classList.toggle("menu-open");
+        nav.classList.toggle("menu-open");
+        logo.classList.toggle('phonelogounactive');
+
+        if (changeIcon) {
+
+          icons.classList.remove("fa-bars");
+          icons.classList.add("fa-times");
+
+          changeIcon = false;
         }
+        else {
+          icons.classList.remove("fa-times");
+          icons.classList.add("fa-bars");
+          changeIcon = true;
+        }
+      });
+    }
 
-        open.addEventListener("click", function () {
+    open.addEventListener("click", function () {
 
-            overlay.classList.toggle("menu-open");
-            nav.classList.toggle("menu-open");
-            logo.classList.toggle('phonelogounactive');
+      overlay.classList.toggle("menu-open");
+      nav.classList.toggle("menu-open");
+      logo.classList.toggle('phonelogounactive');
 
-            if (changeIcon) {
+      if (changeIcon) {
 
-                icons.classList.remove("fa-bars");
-                icons.classList.add("fa-times");
+        icons.classList.remove("fa-bars");
+        icons.classList.add("fa-times");
 
-                changeIcon = false;
-            }
-            else {
-                icons.classList.remove("fa-times");
-                icons.classList.add("fa-bars");
-                changeIcon = true;
-            }
-        });
-
-
+        changeIcon = false;
+      }
+      else {
+        icons.classList.remove("fa-times");
+        icons.classList.add("fa-bars");
+        changeIcon = true;
+      }
+    });
 
 
 
-    </script>
+
+
+  </script>
 </body>
 
 </html>
