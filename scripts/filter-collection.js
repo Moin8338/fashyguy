@@ -210,7 +210,7 @@ function validateDesign(value) {
 function showResult(filterDesign) {
     ContainerDesign.innerHTML='';
     filterDesign.forEach(design => {
-        var card = '<div class="design-card">' +
+        var card = '<div class="design-card is-animated">' +
             '   <div class="design-container">' +
             '       <img src="' + design.image + '" alt="" srcset="">' +
             '   </div>' +
