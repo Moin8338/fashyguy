@@ -95,7 +95,7 @@ let designList = [
     {
         name: "Batman",
         category: "DC",
-        image: "./mokup/design/design-2.PNG"
+        image: "./mokup/design/design-6.png"
     },
     {
         name: "DoctorStrange",
@@ -115,7 +115,7 @@ let designList = [
     {
         name: "Loki",
         category: "Marvel",
-        image: "./mokup/design/design-6.png"
+        image: "./mokup/design/design-2.PNG"
     },
     {
         name: "Hulk",
