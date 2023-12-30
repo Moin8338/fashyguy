@@ -59,7 +59,7 @@ input.onkeyup = (e) => {
             allList[i].addEventListener("click", function () {
 
                 validateDesign(allList[i].textContent);
-                resultBox.innerHTML='';
+                resultBox.innerHTML = '';
                 input.value = '';
             });
         }
@@ -189,35 +189,56 @@ searchItem.forEach(function (item) {
 });
 
 function validateDesign(value) {
-    if(value.toLocaleLowerCase()==="all"){
-        filterDesign=designList;
+    if (value.toLocaleLowerCase() === "all" || value === null) {
+        console.log(value);
+        filterDesign = designList;
     }
-    else{
-    filterDesign = designList.filter(design => {
-        if (design.name.toLocaleLowerCase().startsWith(value.toLocaleLowerCase())
-            || design.category.toLocaleLowerCase().startsWith(value.toLocaleLowerCase())
-            || design.name.toLocaleLowerCase().includes(value.toLocaleLowerCase())
-            || design.category.toLocaleLowerCase().includes(value.toLocaleLowerCase())) {
+    else {
+        filterDesign = designList.filter(design => {
+            if (design.name.toLocaleLowerCase().startsWith(value.toLocaleLowerCase())
+                || design.category.toLocaleLowerCase().startsWith(value.toLocaleLowerCase())
+                || design.name.toLocaleLowerCase().includes(value.toLocaleLowerCase())
+                || design.category.toLocaleLowerCase().includes(value.toLocaleLowerCase())) {
 
-            return design;
-        }
-    });
-}
+                return design;
+            }
+        });
+    }
 
     showResult(filterDesign);
 }
 
 function showResult(filterDesign) {
-    ContainerDesign.innerHTML='';
-    filterDesign.forEach(design => {
-        var card = '<div class="design-card is-animated">' +
-            '   <div class="design-container">' +
-            '       <img src="' + design.image + '" alt="" srcset="">' +
-            '   </div>' +
-            '</div>';
+    ContainerDesign.innerHTML = '';
+    if (filterDesign.length === 0) {
 
-        ContainerDesign.innerHTML += card;
-    });
+        ContainerDesign.classList.add("design-cards-disable");
+        ContainerDesign.classList.remove('design-cards');
+        var notfoundElement = document.createElement('div');
+        notfoundElement.classList.add('design-not-found');
+        var text = document.createElement('p');
+        text.textContent = 'No Design Found';
+        var button = document.createElement('button');
+        button.textContent= 'View Design';
+        button.setAttribute("onclick", "validateDesign('All')");
+        notfoundElement.appendChild(text);
+        notfoundElement.appendChild(button);
+        ContainerDesign.appendChild(notfoundElement);
+        
+
+    } else {
+        ContainerDesign.classList.add('design-cards');
+        ContainerDesign.classList.remove("design-cards-disable");
+        filterDesign.forEach(design => {
+            var card = '<div class="design-card is-animated">' +
+                '   <div class="design-container">' +
+                '       <img src="' + design.image + '" alt="" srcset="">' +
+                '   </div>' +
+                '</div>';
+
+            ContainerDesign.innerHTML += card;
+        });
+    }
 
 }
 
