@@ -41,7 +41,7 @@ input.onkeyup = (e) => {
     let emptyArray = [];
 
     // validateDesign(userData);
-    
+
     if (userData) {
         emptyArray = suggestions.filter((data) => {
             //filtering array value and user characters to lowercase and return only those words which are start with user enetered chars
@@ -115,7 +115,7 @@ let designList = [
     {
         name: "Loki",
         category: "Marvel",
-        image: "./mokup/design/design-6.PNG"
+        image: "./mokup/design/design-6.png"
     },
     {
         name: "Hulk",
@@ -145,7 +145,7 @@ let designList = [
     {
         name: "CyberPunk",
         category: "CyberPunk",
-        image: "./mokup/design/design-6.PNG"
+        image: "./mokup/design/design-6.png"
     },
     {
         name: "Holi",
