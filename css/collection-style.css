@@ -14,6 +14,7 @@ body::-webkit-scrollbar {
 
 body {
   background-color: black;
+  position: relative;
 }
 
 html {
@@ -290,7 +291,7 @@ nav ul li a:hover::after {
 }
 
 .searchInput .icon svg {
-  width: 25px;
+  width: 20px;
 }
 
 .pre-define-suggestion {
@@ -319,6 +320,7 @@ nav ul li a:hover::after {
   padding: .5rem 1rem;
   margin: 0 .25rem;
   font-weight: 300;
+  cursor: pointer;
   text-wrap: nowrap;
   background-color: white;
   color: black;
@@ -369,7 +371,7 @@ nav ul li a:hover::after {
     align-items: center;
     justify-content: center;
     text-align: center;
-    box-shadow: 3px 3px 10px white,inset -3px -3px 10px white;
+    box-shadow: 2px 2px 5px rgb(112, 109, 109),inset -2px -2px 5px rgb(109, 104, 104);
     transition: transform .4s ease;
   }
 
