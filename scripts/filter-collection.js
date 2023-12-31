@@ -6,26 +6,30 @@ let suggestions = [
     "Hulk",
     "Captain America",
     "Ironman",
-    "Loki",
-    "DoctorStrange",
-    "Vlogger",
+    "summer",
+    "sunset",
+    "new year",
+    "motivation",
     "Spiderman",
-    "Antman",
-    "Bucky",
+    "education",
+    // "Antman",
+    // "Bucky",
     "Superman",
     "Batman",
-    "Blackadam",
-    "Bluebeetle",
+    // "Blackadam",
+    // "Bluebeetle",
     "CyberPunk",
     "Eminem",
     "Indian traditional",
     "Holi",
     "Diwali",
     "Raksha bandhan",
+    "indian revolution",
     "Independent day",
     "Indian Flag",
-    "Culture of India",
+    "indian monument",
     "Indian Culture",
+    "krantikari",
 ];
 // getting all required elements
 const searchInput = document.querySelector(".searchInput");
@@ -45,7 +49,8 @@ input.onkeyup = (e) => {
     if (userData) {
         emptyArray = suggestions.filter((data) => {
             //filtering array value and user characters to lowercase and return only those words which are start with user enetered chars
-            return data.toLocaleLowerCase().startsWith(userData.toLocaleLowerCase());
+            if (data.toLocaleLowerCase().startsWith(userData.toLocaleLowerCase()) || data.toLocaleLowerCase().includes(userData.toLocaleLowerCase()))
+                return data;
         });
         emptyArray = emptyArray.map((data) => {
             // passing return data inside li tag
@@ -88,9 +93,24 @@ function showSuggestions(list) {
 
 let designList = [
     {
+        name: "Captain america",
+        category: "Marvel",
+        image: "./mokup/design/captain-america.png"
+    },
+    {
         name: "Spiderman",
         category: "Marvel",
-        image: "./mokup/design/design-1.PNG"
+        image: "./mokup/design/spiderman.png"
+    },
+    {
+        name: "Hulk",
+        category: "Marvel",
+        image: "./mokup/design/hulk.png"
+    },
+    {
+        name: "Hulk with background",
+        category: "Marvel",
+        image: "./mokup/design/hulk-with-background.png"
     },
     {
         name: "Batman",
@@ -98,70 +118,190 @@ let designList = [
         image: "./mokup/design/design-6.png"
     },
     {
-        name: "DoctorStrange",
-        category: "Marvel",
-        image: "./mokup/design/design-3.PNG"
+        name: "Batman",
+        category: "DC",
+        image: "./mokup/design/batman-2.png"
+    },
+    {
+        name: "Batman",
+        category: "DC",
+        image: "./mokup/design/batman-3.png"
     },
     {
         name: "Ironman",
         category: "Marvel",
-        image: "./mokup/design/design-4.PNG"
+        image: "./mokup/design/ironman.png"
+    },
+    {
+        name: "Ironman",
+        category: "Marvel",
+        image: "./mokup/design/ironman-2.png"
     },
     {
         name: "Thor",
         category: "Marvel",
-        image: "./mokup/design/design-5.PNG"
-    },
-    {
-        name: "Loki",
-        category: "Marvel",
-        image: "./mokup/design/design-2.PNG"
-    },
-    {
-        name: "Hulk",
-        category: "Marvel",
-        image: "./mokup/design/design-1.PNG"
+        image: "./mokup/design/thor.png"
     },
     {
         name: "Superman",
         category: "DC",
-        image: "./mokup/design/design-2.PNG"
+        image: "./mokup/design/superman-2.png"
+    },
+    {
+        name: "Superman",
+        category: "DC",
+        image: "./mokup/design/superman-3.png"
+    },
+    {
+        name: "new year",
+        category: "new year",
+        image: "./mokup/design/new-year.png"
+    },
+    {
+        name: "happy new year",
+        category: "new year",
+        image: "./mokup/design/new-year-2.png"
     },
     {
         name: "Flash",
         category: "DC",
-        image: "./mokup/design/design-3.PNG"
+        image: "./mokup/design/flash.png"
     },
     {
-        name: "Blackadam",
-        category: "DC",
-        image: "./mokup/design/design-4.PNG"
+        name: "Sunset",
+        category: "nature",
+        image: "./mokup/design/sunset.png"
     },
     {
-        name: "Bluebeetle",
-        category: "DC",
-        image: "./mokup/design/design-5.PNG"
+        name: "Sunset",
+        category: "nature",
+        image: "./mokup/design/sunset-2.png"
     },
     {
-        name: "CyberPunk",
-        category: "CyberPunk",
-        image: "./mokup/design/design-6.png"
+        name: "Summer",
+        category: "nature",
+        image: "./mokup/design/summer.png"
     },
     {
-        name: "Holi",
-        category: "Indian Traditional",
-        image: "./mokup/design/design-1.PNG"
+        name: "Summer-t-shirt-design",
+        category: "nature",
+        image: "./mokup/design/Summer-T-Shirt-Design.png"
     },
     {
-        name: "Diwali",
-        category: "Indian Traditional",
-        image: "./mokup/design/design-2.PNG"
+        name: "Eat sleep game repeat",
+        category: "funcky",
+        image: "./mokup/design/other.png"
     },
     {
         name: "Raksha bandhan",
         category: "Indian Traditional",
-        image: "./mokup/design/design-3.PNG"
-    }
+        image: "./mokup/design/raksha-bandhan.png"
+    },
+    {
+        name: "diwali",
+        category: "Indian Traditional",
+        image: "./mokup/design/diwali.png"
+    },
+    {
+        name: "diwali",
+        category: "Indian Traditional",
+        image: "./mokup/design/diwali-2.png"
+    },
+    {
+        name: "diwali",
+        category: "Indian Traditional",
+        image: "./mokup/design/diwali-3.png"
+    },
+    {
+        name: "diwali",
+        category: "Indian Traditional",
+        image: "./mokup/design/diwali-4.png"
+    },
+    {
+        name: "indian revolution",
+        category: "revolution",
+        image: "./mokup/design/indian-revolution.png"
+    },
+    {
+        name: "indian revolution kashmir",
+        category: "revolution",
+        image: "./mokup/design/indian-revolution-kashmir.png"
+    },
+    {
+        name: "never give up",
+        category: "motivation",
+        image: "./mokup/design/never-give-up.png"
+    },
+    {
+        name: "never stop dream",
+        category: "motivation",
+        image: "./mokup/design/never-stop-dream.png"
+    },
+    {
+        name: "holi",
+        category: "Indian Traditional",
+        image: "./mokup/design/holi.png"
+    },
+    {
+        name: "holi",
+        category: "Indian Traditional",
+        image: "./mokup/design/holi-2.png"
+    },
+    {
+        name: "education",
+        category: "education",
+        image: "./mokup/design/education.png"
+    },
+    {
+        name: "education",
+        category: "education",
+        image: "./mokup/design/education-2.png"
+    },
+    {
+        name: "education",
+        category: "education",
+        image: "./mokup/design/education-3.png"
+    },
+    {
+        name: "indian culture",
+        category: "culture",
+        image: "./mokup/design/indian-culture.png"
+    },
+    {
+        name: "independent day",
+        category: "indian culture",
+        image: "./mokup/design/independent-day.png"
+    },
+    {
+        name: "indian navy",
+        category: "indian culture",
+        image: "./mokup/design/indian-navy.png"
+    },
+    {
+        name: "krantikari",
+        category: "krantikari",
+        image: "./mokup/design/krantikari.png"
+    },
+    {
+        name: "indian flag",
+        category: "indian flag",
+        image: "./mokup/design/Indian-Flag-Characters-Cheer.png"
+    },
+    {
+        name: "indian flag",
+        category: "indian flag",
+        image: "./mokup/design/Indian-flag.png"
+    },
+    {
+        name: "Indian revolution",
+        category: "revolution",
+        image: "./mokup/design/Retro-fist-power-worker-revolution.png"
+    },
+    {
+        name: "Indian monument",
+        category: "indian culture",
+        image: "./mokup/design/indian-monument.png"
+    },
 ]
 
 
@@ -198,7 +338,8 @@ function validateDesign(value) {
             if (design.name.toLocaleLowerCase().startsWith(value.toLocaleLowerCase())
                 || design.category.toLocaleLowerCase().startsWith(value.toLocaleLowerCase())
                 || design.name.toLocaleLowerCase().includes(value.toLocaleLowerCase())
-                || design.category.toLocaleLowerCase().includes(value.toLocaleLowerCase())) {
+                || design.category.toLocaleLowerCase().includes(value.toLocaleLowerCase())
+                ||design.image.toLocaleLowerCase().includes(value.toLocaleLowerCase())) {
 
                 return design;
             }
@@ -219,12 +360,12 @@ function showResult(filterDesign) {
         var text = document.createElement('p');
         text.textContent = 'No Design Found';
         var button = document.createElement('button');
-        button.textContent= 'View Design';
+        button.textContent = 'View Design';
         button.setAttribute("onclick", "validateDesign('All')");
         notfoundElement.appendChild(text);
         notfoundElement.appendChild(button);
         ContainerDesign.appendChild(notfoundElement);
-        
+
 
     } else {
         ContainerDesign.classList.add('design-cards');
