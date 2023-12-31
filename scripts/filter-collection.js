@@ -290,7 +290,7 @@ let designList = [
     {
         name: "indian flag",
         category: "indian flag",
-        image: "./mokup/design/Indian-flag.png"
+        image: "./mokup/design/indian-flag.png"
     },
     {
         name: "Indian revolution",
