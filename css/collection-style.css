@@ -382,7 +382,7 @@ nav ul li a:hover::after {
   align-items: center;
   justify-content: center;
   text-align: center;
-  box-shadow: 2px 2px 5px rgb(112, 109, 109), inset -2px -2px 5px rgb(109, 104, 104);
+  box-shadow: 1px 1px 5px rgb(112, 109, 109), inset -1px -1px 5px rgb(109, 104, 104);
   transition: transform .4s ease;
   /* opacity: 0; */
 }
